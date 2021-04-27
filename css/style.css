@@ -71,19 +71,29 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column-reverse;
+  body {
+    font-size: .9em;
   }
 
+  .container {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+
+  .header__img img {
+    filter: drop-shadow(3px 2px 4px #000);
+  }
+  
   .header__texts {
     z-index: 8;
   }
-
+  
   .header__texts h2 {
     margin-bottom: 0;
   }
-
+  
   .header__texts a {
+    filter: drop-shadow(-1px -1px 3px #000);
     background-color: #087496;
     margin: 1em;
   }
@@ -93,3 +103,13 @@ body {
     margin-top: 2em;
   }
 } 
+
+@media screen and (max-width:320px) {
+  body {
+    font-size: .8em;
+  }
+
+  .header__img {
+    width: 100%;
+  }
+}
